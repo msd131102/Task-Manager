@@ -1,0 +1,295 @@
+.task-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+    .task-form-overlay {
+        padding: 40px;
+    }
+    
+    .task-form {
+        max-width: 700px;
+        padding: 32px;
+    }
+    
+    .task-form h2 {
+        font-size: 1.8rem;
+        margin-bottom: 24px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 10px 14px;
+        font-size: 1rem;
+    }
+    
+    .form-group textarea {
+        min-height: 100px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .subtask-input {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+    
+    .subtask-input input {
+        padding: 10px 14px;
+        font-size: 1rem;
+    }
+    
+    .subtask-input button {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+    
+    .subtasks-list li {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+    
+    .form-actions {
+        gap: 16px;
+        margin-top: 32px;
+        padding-top: 20px;
+    }
+    
+    .btn-cancel,
+    .btn-save {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+}
+
+.task-form {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.task-form h2 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 4px;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.subtask-input {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.subtask-input input {
+    flex: 1;
+    color: #333;
+}
+
+.subtask-input button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.subtask-input button:hover {
+    background-color: #0056b3;
+}
+
+.subtasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subtasks-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.subtasks-list li:last-child {
+    border-bottom: none;
+}
+
+.subtasks-list input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.subtasks-list span {
+    flex: 1;
+    color: #333;
+}
+
+.subtasks-list span.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.remove-subtask {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0 4px;
+    line-height: 1;
+}
+
+.remove-subtask:hover {
+    background-color: #ffebee;
+    border-radius: 2px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+.btn-cancel,
+.btn-save {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #545b62;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .task-form-overlay {
+        padding: 10px;
+    }
+    
+    .task-form {
+        padding: 16px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn-cancel,
+    .btn-save {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .subtask-input {
+        flex-direction: column;
+    }
+    
+    .subtask-input button {
+        align-self: flex-end;
+    }
+}
