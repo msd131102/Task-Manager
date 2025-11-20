@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authService from './authService';
 
-const API_BASE_URL = 'http://localhost:5000/api/tasks';
+const API_BASE_URL = 'https://task-manager-backend-86zy.onrender.com/api/tasks';
 
 // Initialize auth headers
 authService.initAuth();

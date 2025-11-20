@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api/auth';
+const API_BASE_URL = 'https://task-manager-backend-86zy.onrender.com/api/auth';
 
 // Store token in localStorage
 const setAuthToken = (token) => {
